@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SB Resolution</title>
+<style>
+  body { font-family: Arial; padding: 20px; }
+  .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+  .tab-btn { padding: 10px 15px; border: 1px solid green; cursor: pointer; }
+  .active { background: green; color: white; }
+  .tab-section { display: none; }
+  .tab-section.acative { display: block; }
+</style>
+</head>
+<body>
+
+<h1>SB Resolution</h1>
+
+<div class="tabs">
+  <div class="tab-btn active" onclick="showTab('2026')">SB CY 2026</div>
+  <div class="tab-btn" onclick="showTab('2025')">SB CY 2025</div>
+  <div class="tab-btn" onclick="showTab('2024')">SB CY 2024</div>
+  <div class="tab-btn" onclick="showTab('2023')">SB CY 2023</div>
+</div>
+
+<div id="2026" class="tab-section active">
+  <p>No files added yet (2026)</p>
+</div>
+
+<div id="2025" class="tab-section">
+  <p>Sample file for 2025</p>
+</div>
+
+<div id="2024" class="tab-section">
+  <p>Sample file for 2024</p>
+</div>
+
+<div id="2023" class="tab-section">
+  <p>Sample file for 2023</p>
+</div>
+
+<script>
+function showTab(year) {
+  document.querySelectorAll(".tab-btn").forEach(btn
+=> btn.classLis.remove("active"));
+
+document.getElementById(year).classList.add("active");
+
+   event.target.classList.add("active");
+}
+</script>
+
+</body>
+</html>
